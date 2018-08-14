@@ -51,7 +51,7 @@ public class Testing {
 		}
 
 		try {
-			FileOutputStream outputStream = new FileOutputStream("C:\\Users\\Jainish\\Pictures\\abc.xlsx");
+			FileOutputStream outputStream = new FileOutputStream("./testData/abc.xlsx");
 			workbook.write(outputStream);
 			workbook.close();
 		} catch (FileNotFoundException e) {
@@ -68,7 +68,7 @@ public class Testing {
 
 		System.out.println("Started TestCase Two");
 		// Creating a Workbook from an Excel file (.xls or .xlsx)
-		Workbook workbook = WorkbookFactory.create(new File("C:\\Users\\Jainish\\Pictures\\abc.xlsx"));
+		Workbook workbook = WorkbookFactory.create(new File("./testData/abc.xlsx"));
 
 		// Retrieving the number of sheets in the Workbook
 		System.out.println("Workbook has " + workbook.getNumberOfSheets() + " Sheet : ");
@@ -100,7 +100,7 @@ public class Testing {
 
 		System.out.println("Started TestCase Three");
 
-		FileInputStream input = new FileInputStream(new File("C:\\Users\\Jainish\\Pictures\\abc.xlsx")); 
+		FileInputStream input = new FileInputStream(new File("./testData/abc.xlsx")); 
 
 		XSSFWorkbook wb = new XSSFWorkbook(input); 
 
@@ -114,7 +114,7 @@ public class Testing {
 
 		input.close();
 
-		FileOutputStream output_file =new FileOutputStream(new File("C:\\Users\\Jainish\\Pictures\\abc.xlsx"));  
+		FileOutputStream output_file =new FileOutputStream(new File("./testData/abc.xlsx"));  
 
 		wb.write(output_file);
 
@@ -126,7 +126,7 @@ public class Testing {
 
 		System.out.println("Started TestCase Four");
 
-		FileInputStream input = new FileInputStream(new File("C:\\Users\\Jainish\\Pictures\\abc.xlsx")); 
+		FileInputStream input = new FileInputStream(new File("./testData/abc.xlsx")); 
 
 		XSSFWorkbook workbook = new XSSFWorkbook(input); 
 
@@ -157,7 +157,7 @@ public class Testing {
 		}
 
 		try {
-			FileOutputStream outputStream = new FileOutputStream("C:\\Users\\Jainish\\Pictures\\abc.xlsx");
+			FileOutputStream outputStream = new FileOutputStream("./testData/abc.xlsx");
 			workbook.write(outputStream);
 			workbook.close();
 		} catch (FileNotFoundException e) {
