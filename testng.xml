@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="10">
+	<test thread-count="1" name="Test">
+		<classes>
+			<class name="Testing.Testing.Testing">
+				<methods>
+					<include name="createExcel" />
+					<include name="readExcel" />
+					<include name="updateExcel" />
+					<include name="appendDataToExcel" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
