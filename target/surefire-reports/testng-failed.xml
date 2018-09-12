@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
   <test thread-count="5" verbose="0" name="Test(failed)">
     <classes>
-      <class name="Testing.Testing.Testing">
+      <class name="com.jdbc.MySqlConnection">
         <methods>
-          <include name="updateExcel"/>
-          <include name="readExcel"/>
+          <include name="dbConnection"/>
         </methods>
-      </class> <!-- Testing.Testing.Testing -->
+      </class> <!-- com.jdbc.MySqlConnection -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

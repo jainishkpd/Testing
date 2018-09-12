@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,6 +108,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Testing.Testing.Testing" hash-for-method="createExcel">createExcel</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.jdbc.MySqlConnection" hash-for-method="dbConnection">dbConnection</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -168,6 +173,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.jdbc.MySqlConnection</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="dbConnection">
+                  </a> <!-- dbConnection -->
+                  <span class="method-name">dbConnection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -188,6 +208,11 @@
           &lt;include name=&quot;appendDataToExcel&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- Testing.Testing.Testing --&gt;
+      &lt;class name=&quot;com.jdbc.MySqlConnection&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;dbConnection&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.jdbc.MySqlConnection --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -201,7 +226,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -227,28 +252,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createExcel')
 data.setCell(0, 2, 'Testing.Testing.Testing')
-data.setCell(0, 3, 563);
+data.setCell(0, 3, 572);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'readExcel')
-data.setCell(1, 2, 'Testing.Testing.Testing')
-data.setCell(1, 3, 111);
+data.setCell(1, 1, 'dbConnection')
+data.setCell(1, 2, 'com.jdbc.MySqlConnection')
+data.setCell(1, 3, 272);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'appendDataToExcel')
+data.setCell(2, 1, 'readExcel')
 data.setCell(2, 2, 'Testing.Testing.Testing')
-data.setCell(2, 3, 110);
+data.setCell(2, 3, 117);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'updateExcel')
+data.setCell(3, 1, 'appendDataToExcel')
 data.setCell(3, 2, 'Testing.Testing.Testing')
-data.setCell(3, 3, 63);
+data.setCell(3, 3, 96);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'updateExcel')
+data.setCell(4, 2, 'Testing.Testing.Testing')
+data.setCell(4, 3, 59);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 847 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -281,15 +310,22 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">readExcel</span>
-                <span class="method-start">565 ms</span>
+                <span class="method-start">575 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">updateExcel</span>
-                <span class="method-start">677 ms</span>
+                <span class="method-start">693 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">appendDataToExcel</span>
-                <span class="method-start">741 ms</span>
+                <span class="method-start">752 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.jdbc.MySqlConnection</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">dbConnection</span>
+                <span class="method-start">850 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

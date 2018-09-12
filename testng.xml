@@ -11,6 +11,11 @@
 					<include name="appendDataToExcel" />
 				</methods>
 			</class>
+			<class name="com.jdbc.MySqlConnection">
+				<methods>
+					<include name="dbConnection" />
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>
