@@ -13,6 +13,20 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+		<maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+		<maven-surefire-report-plugin.version>2.22.1</maven-surefire-report-plugin.version>
+		<jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
+		<junit.version>3.8.1</junit.version>
+		<poi-ooxml.version>4.0.0</poi-ooxml.version>
+		<poi-examples.version>4.0.0</poi-examples.version>
+		<poi-excelant.version>4.0.0</poi-excelant.version>
+		<poi-ooxml-schemas.version>4.0.0</poi-ooxml-schemas.version>
+		<poi-scratchpad.version>4.0.0</poi-scratchpad.version>
+		<xmlbeans.version>3.0.1</xmlbeans.version>
+		<testng.version>6.14.3</testng.version>
+		<mysql-connector-java.version>8.0.12</mysql-connector-java.version>
+		<sonar-maven-plugin.version>3.5.0.1254</sonar-maven-plugin.version>
 	</properties>
 	<build>
 		<plugins>
@@ -25,7 +39,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
+				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
 					<source>1.10</source>
 					<target>1.10</target>
@@ -35,7 +49,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.22.1</version>
+				<version>${maven-surefire-plugin.version}</version>
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
@@ -46,12 +60,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>2.22.1</version>
+				<version>${maven-surefire-report-plugin.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.2</version>
+				<version>${jacoco-maven-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>pre-unit-test</id>
@@ -85,61 +99,61 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>4.0.0</version>
+			<version>${poi-ooxml.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-examples</artifactId>
-			<version>4.0.0</version>
+			<version>${poi-examples.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-excelant -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-excelant</artifactId>
-			<version>4.0.0</version>
+			<version>${poi-excelant.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml-schemas</artifactId>
-			<version>4.0.0</version>
+			<version>${poi-ooxml-schemas.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-scratchpad</artifactId>
-			<version>4.0.0</version>
+			<version>${poi-scratchpad.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
 		<dependency>
 			<groupId>org.apache.xmlbeans</groupId>
 			<artifactId>xmlbeans</artifactId>
-			<version>3.0.1</version>
+			<version>${xmlbeans.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
+			<version>${testng.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.12</version>
+			<version>${mysql-connector-java.version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/sonar-maven-plugin -->
 		<dependency>
 			<groupId>org.codehaus.mojo</groupId>
 			<artifactId>sonar-maven-plugin</artifactId>
-			<version>3.5.0.1254</version>
+			<version>${sonar-maven-plugin.version}</version>
 			<type>pom</type>
 		</dependency>
 	</dependencies>
