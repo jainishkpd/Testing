@@ -19,7 +19,7 @@ import java.io.IOException;
 public class Testing {
 
 	String filePath = ".//testData//userDetails.xlsx";
-	
+
 	@Test
 	public void createExcel() {
 
@@ -34,34 +34,9 @@ public class Testing {
 				{"003", "Login", "Pass Valid username and Invalid password", "Login should not allow", "NA"},
 				{"004", "Login", "Pass Valid username and password", "Login should allow and redirect to dashboard page.", "NA"}
 		};
-
 		int rowNum = 0;
+		genericMethod(workbook, sheet, datatypes, rowNum);
 		System.out.println("Creating excel");
-
-		for (Object[] datatype : datatypes) {
-			Row row = sheet.createRow(rowNum++);
-			int colNum = 0;
-			for (Object field : datatype) {
-				Cell cell = row.createCell(colNum++);
-				if (field instanceof String) {
-					cell.setCellValue((String) field);
-				} else if (field instanceof Integer) {
-					cell.setCellValue((Integer) field);
-				}
-			}
-		}
-
-		try {
-			FileOutputStream outputStream = new FileOutputStream(filePath);
-			workbook.write(outputStream);
-			workbook.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		System.out.println("Test Case Created Successfully");
 	}
 
 	@Test
@@ -131,7 +106,7 @@ public class Testing {
 
 		XSSFWorkbook workbook = new XSSFWorkbook(input); 
 
-		XSSFSheet worksheet = workbook.getSheetAt(0);
+		XSSFSheet sheet = workbook.getSheetAt(0);
 
 		Object[][] datatypes = {
 				{"005", "Login", "Pass Invalid username and password", "Login should not allow", "NA"},
@@ -140,12 +115,20 @@ public class Testing {
 				{"008", "Login", "Pass Valid username and password", "Login should allow and redirect to dashboard page.", "NA"}
 		};
 
-		int lastRowNum = worksheet.getLastRowNum()+1;
+		int lastRowNum = sheet.getLastRowNum()+1;
 
+		//XSSFSheet sheet = null;
+		genericMethod(workbook, sheet, datatypes, lastRowNum);
 		System.out.println("Append Data to excel");
 
+		System.out.println("Test Case Append Successfully");
+		readExcel();
+	}
+	
+	public void genericMethod(XSSFWorkbook workbook, XSSFSheet sheet, Object[][] datatypes, int rowNum) {
+
 		for (Object[] datatype : datatypes) {
-			Row row = worksheet.createRow(lastRowNum++);
+			Row row = sheet.createRow(rowNum++);
 			int colNum = 0;
 			for (Object field : datatype) {
 				Cell cell = row.createCell(colNum++);
@@ -167,8 +150,6 @@ public class Testing {
 			e.printStackTrace();
 		}
 
-		System.out.println("Test Case Append Successfully");
-		readExcel();
+		System.out.println("Test Case Created Successfully");
 	}
-
 }
