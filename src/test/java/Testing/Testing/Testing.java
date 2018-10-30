@@ -10,7 +10,6 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.tools.ant.types.resources.Last;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -19,12 +18,14 @@ import java.io.IOException;
 
 public class Testing {
 
+	String filePath = ".//testData//userDetails.xlsx";
+	
 	@Test
 	public void createExcel() {
 
 		System.out.println("Started TestCase One");
 
-		XSSFWorkbook workbook = new XSSFWorkbook();
+		XSSFWorkbook workbook = new XSSFWorkbook(); 
 		XSSFSheet sheet = workbook.createSheet("Datatypes in Java");
 		Object[][] datatypes = {
 				{"TestCaseID", "Module", "TestCase Name", "Expected Result", "Actual Result"},
@@ -51,7 +52,7 @@ public class Testing {
 		}
 
 		try {
-			FileOutputStream outputStream = new FileOutputStream("./testData/abc.xlsx");
+			FileOutputStream outputStream = new FileOutputStream(filePath);
 			workbook.write(outputStream);
 			workbook.close();
 		} catch (FileNotFoundException e) {
@@ -68,7 +69,7 @@ public class Testing {
 
 		System.out.println("Started TestCase Two");
 		// Creating a Workbook from an Excel file (.xls or .xlsx)
-		Workbook workbook = WorkbookFactory.create(new File("./testData/abc.xlsx"));
+		Workbook workbook = WorkbookFactory.create(new File(filePath));
 
 		// Retrieving the number of sheets in the Workbook
 		System.out.println("Workbook has " + workbook.getNumberOfSheets() + " Sheet : ");
@@ -100,7 +101,7 @@ public class Testing {
 
 		System.out.println("Started TestCase Three");
 
-		FileInputStream input = new FileInputStream(new File("./testData/abc.xlsx")); 
+		FileInputStream input = new FileInputStream(new File(filePath)); 
 
 		XSSFWorkbook wb = new XSSFWorkbook(input); 
 
@@ -114,7 +115,7 @@ public class Testing {
 
 		input.close();
 
-		FileOutputStream output_file =new FileOutputStream(new File("./testData/abc.xlsx"));  
+		FileOutputStream output_file =new FileOutputStream(new File(filePath));  
 
 		wb.write(output_file);
 
@@ -126,7 +127,7 @@ public class Testing {
 
 		System.out.println("Started TestCase Four");
 
-		FileInputStream input = new FileInputStream(new File("./testData/abc.xlsx")); 
+		FileInputStream input = new FileInputStream(new File(filePath)); 
 
 		XSSFWorkbook workbook = new XSSFWorkbook(input); 
 
@@ -157,7 +158,7 @@ public class Testing {
 		}
 
 		try {
-			FileOutputStream outputStream = new FileOutputStream("./testData/abc.xlsx");
+			FileOutputStream outputStream = new FileOutputStream(filePath);
 			workbook.write(outputStream);
 			workbook.close();
 		} catch (FileNotFoundException e) {
