@@ -22,7 +22,7 @@
 		<poi-examples.version>4.0.0</poi-examples.version>
 		<poi-excelant.version>4.0.0</poi-excelant.version>
 		<poi-ooxml-schemas.version>4.0.0</poi-ooxml-schemas.version>
-		<poi-scratchpad.version>4.0.0</poi-scratchpad.version>
+		<poi-scratchpad.version>5.2.1</poi-scratchpad.version>
 		<xmlbeans.version>3.0.1</xmlbeans.version>
 		<testng.version>6.14.3</testng.version>
 		<mysql-connector-java.version>8.0.12</mysql-connector-java.version>
